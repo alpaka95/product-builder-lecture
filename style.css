@@ -31,7 +31,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.lotto-machine, .contact-form-container {
+.lotto-machine, .contact-form-container, #disqus-container {
     background-color: var(--card-bg);
     border-radius: 15px;
     padding: 30px;
@@ -41,6 +41,10 @@ body {
     width: 100%;
     max-width: 500px;
     margin-bottom: 30px;
+}
+
+#disqus-container {
+    text-align: left;
 }
 
 .contact-form-container h2 {
