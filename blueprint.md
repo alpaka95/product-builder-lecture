@@ -9,6 +9,7 @@ This is a simple web application that generates random lottery numbers.
 *   Generates 6 unique random numbers between 1 and 45.
 *   Displays the generated numbers with a visually appealing animation.
 *   Modern and responsive design.
+*   **Partnership Inquiry Form**: Integrated Formspree contact form for affiliate inquiries.
 
 ## Current Plan
 

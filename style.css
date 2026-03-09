@@ -22,21 +22,86 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 40px 20px;
     font-family: sans-serif;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.lotto-machine {
+.lotto-machine, .contact-form-container {
     background-color: var(--card-bg);
     border-radius: 15px;
-    padding: 20px;
+    padding: 30px;
     box-shadow: 0 0 20px var(--shadow);
     text-align: center;
     transition: background-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.contact-form-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    opacity: 0.7;
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-size: 16px;
+    transition: opacity 0.3s, border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    opacity: 1;
+    outline: none;
+    border-color: var(--btn-bg);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#submit-btn {
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+#submit-btn:hover {
+    opacity: 0.9;
 }
 
 .numbers-container {
