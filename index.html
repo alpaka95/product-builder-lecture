@@ -12,65 +12,66 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="lotto-machine">
-        <h1>Lotto Number Generator</h1>
-        <div class="numbers-container"></div>
-        <button id="generate-btn">Generate Numbers</button>
-        <div class="controls">
-            <button id="theme-toggle">Dark Mode</button>
-        </div>
-    </div>
+    <header class="site-header">
+        <nav class="nav-container">
+            <div class="nav-logo">LottoGen</div>
+            <ul class="nav-links">
+                <li><a href="#generator">Generator</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-toggle">Theme</button></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="contact-form-container">
-        <h2>제휴 문의</h2>
-        <form class="contact-form" action="https://formspree.io/f/mlgpgddy" method="POST">
-            <div class="form-group">
-                <label for="name">성함 / 담당자명</label>
-                <input type="text" id="name" name="name" placeholder="홍길동" required>
-            </div>
-            <div class="form-group">
-                <label for="email">이메일 주소</label>
-                <input type="email" id="email" name="_replyto" placeholder="example@email.com" required>
-            </div>
-            <div class="form-group">
-                <label for="company">회사명 / 서비스명</label>
-                <input type="text" id="company" name="company" placeholder="회사명을 입력해주세요">
-            </div>
-            <div class="form-group">
-                <label for="message">문의 내용</label>
-                <textarea id="message" name="message" placeholder="제휴 관련 내용을 상세히 적어주세요" required></textarea>
-            </div>
-            <button type="submit" id="submit-btn">문의하기</button>
-        </form>
-    </div>
+    <main class="main-content">
+        <section id="generator" class="lotto-machine">
+            <h1>Lotto Number Generator</h1>
+            <div class="numbers-container"></div>
+            <button id="generate-btn">Generate Numbers</button>
+        </section>
 
-    <div id="disqus-container">
-        <div id="disqus_thread"></div>
-    </div>
-    <script>
-        var disqus_config = function () {
-            this.page.url = window.location.href;  
-            this.page.identifier = window.location.pathname; 
-        };
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://productbuilder-jcc9vv3apq.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <section id="how-it-works" class="info-section">
+            <h2>How Our Lotto Number Generator Works</h2>
+            <p>Welcome to our professional Lotto Number Generator. Unlike basic generators, our tool utilizes advanced Random Number Generation (RNG) algorithms built into your browser to ensure a completely fair and unbiased selection of numbers. When you click "Generate Numbers", the system instantly calculates a unique combination, simulating the true randomness of a physical lottery machine.</p>
+            
+            <h3>Why Use a Random Generator?</h3>
+            <p>Many players tend to pick numbers based on birthdays, anniversaries, or visual patterns on the ticket. This often leads to clustered numbers (e.g., 1-31). Using a truly random generator gives you a combination spread across the entire board, potentially reducing the chance of splitting a prize if you win.</p>
+            
+            <h3>Play Responsibly</h3>
+            <p>Please remember that lottery games are games of chance. No tool, system, or generator can predict winning numbers or guarantee a win. Our generator is designed for entertainment and convenience. Always play responsibly and within your budget. If you or someone you know has a gambling problem, please seek professional help.</p>
+        </section>
 
-    <section class="info-section">
-        <h2>How Our Lotto Number Generator Works</h2>
-        <p>Welcome to our professional Lotto Number Generator. Unlike basic generators, our tool utilizes advanced Random Number Generation (RNG) algorithms built into your browser to ensure a completely fair and unbiased selection of numbers. When you click "Generate Numbers", the system instantly calculates a unique combination, simulating the true randomness of a physical lottery machine.</p>
-        
-        <h3>Why Use a Random Generator?</h3>
-        <p>Many players tend to pick numbers based on birthdays, anniversaries, or visual patterns on the ticket. This often leads to clustered numbers (e.g., 1-31). Using a truly random generator gives you a combination spread across the entire board, potentially reducing the chance of splitting a prize if you win.</p>
-        
-        <h3>Play Responsibly</h3>
-        <p>Please remember that lottery games are games of chance. No tool, system, or generator can predict winning numbers or guarantee a win. Our generator is designed for entertainment and convenience. Always play responsibly and within your budget. If you or someone you know has a gambling problem, please seek professional help.</p>
-    </section>
+        <section id="contact" class="contact-form-container">
+            <h2>제휴 문의 (Contact Us)</h2>
+            <form class="contact-form" action="https://formspree.io/f/mlgpgddy" method="POST">
+                <div class="form-group">
+                    <label for="name">성함 / 담당자명</label>
+                    <input type="text" id="name" name="name" placeholder="홍길동" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">이메일 주소</label>
+                    <input type="email" id="email" name="_replyto" placeholder="example@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">회사명 / 서비스명</label>
+                    <input type="text" id="company" name="company" placeholder="회사명을 입력해주세요">
+                </div>
+                <div class="form-group">
+                    <label for="message">문의 내용</label>
+                    <textarea id="message" name="message" placeholder="제휴 관련 내용을 상세히 적어주세요" required></textarea>
+                </div>
+                <button type="submit" id="submit-btn">문의하기</button>
+            </form>
+        </section>
+
+        <section id="comments" class="disqus-wrapper">
+            <h2>Community Feedback</h2>
+            <div id="disqus-container">
+                <div id="disqus_thread"></div>
+            </div>
+        </section>
+    </main>
 
     <footer class="site-footer">
         <p>&copy; 2026 Lotto Number Generator. All rights reserved.</p>
@@ -80,6 +81,21 @@
         </div>
     </footer>
 
+    <button id="back-to-top" title="Go to top">↑</button>
+
+    <script>
+        var disqus_config = function () {
+            this.page.url = window.location.href;  
+            this.page.identifier = window.location.pathname; 
+        };
+        (function() { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://productbuilder-jcc9vv3apq.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <script src="main.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 const generateBtn = document.getElementById('generate-btn');
 const themeToggle = document.getElementById('theme-toggle');
 const numbersContainer = document.querySelector('.numbers-container');
+const backToTopBtn = document.getElementById('back-to-top');
 
 // Theme Logic
 const currentTheme = localStorage.getItem('theme') || 'light';
@@ -36,4 +37,20 @@ generateBtn.addEventListener('click', () => {
         numberDiv.textContent = number;
         numbersContainer.appendChild(numberDiv);
     }
+});
+
+// Back to Top Logic
+window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+};
+
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });
