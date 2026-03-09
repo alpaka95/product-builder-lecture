@@ -31,7 +31,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.lotto-machine, .contact-form-container, #disqus-container {
+.lotto-machine, .contact-form-container, #disqus-container, .info-section, .content-container {
     background-color: var(--card-bg);
     border-radius: 15px;
     padding: 30px;
@@ -45,6 +45,17 @@ body {
 
 #disqus-container {
     text-align: left;
+}
+
+.info-section, .content-container {
+    text-align: left;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.info-section h2, .content-container h1, .content-container h2 {
+    color: var(--btn-bg);
+    margin-top: 0;
 }
 
 .contact-form-container h2 {
@@ -156,4 +167,33 @@ body {
     background-color: transparent;
     border: 1px solid var(--text-color);
     color: var(--text-color);
+}
+
+/* Footer & Additional Pages */
+.site-footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid var(--text-color);
+    opacity: 0.8;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a, .back-link {
+    color: var(--btn-bg);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links a:hover, .back-link:hover {
+    text-decoration: underline;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
 }
